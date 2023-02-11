@@ -9,9 +9,9 @@ int decimaltobinary(int num)
     // int i = 0;
     // while(num > 0)
     // {
-    //     int bit = num%2;            //remainder but bits in reverse order
+    //     int bit = num%2;            //remainder but bits in reverse order   and %x where x is the base to be converted into here binary hence 2
     //     binary = bit*pow(10,i++)+binary;  //to reverse the bits we got to get an binary number eqivalent.
-    //     num = num/2;    //next iteration num should be num/2 
+    //     num = num/2;    //next iteration num should be num/2   same as above logic for 2
     // }
     // return binary;
 
