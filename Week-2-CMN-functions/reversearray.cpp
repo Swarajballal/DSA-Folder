@@ -19,16 +19,31 @@ void reversearr(int arr[], int size)
     // }
 
     // without predefined function for swap for reverse
+    // using temp variable
+//     while(start < end)
+//     {
+//         int temp = arr[start];
+//         arr[start] = arr[end];
+//         arr[end] = temp ;
+//         start++;
+//         end--;
+//     }
 
+//     for(int j=0; j<size; j++)
+//     {
+//         cout<<arr[j]<<" ";
+//     }
+// }
+
+// without predefined function for swap for reverse and also without temp variable
     while(start < end)
     {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
+        arr[start] = arr[start] + arr[end];     // 2+5 = 7
+        arr[end] = arr[start] - arr[end];       // 7-5 = 2
+        arr[start] = arr[start] - arr[end];     // 7-2 = 5
         start++;
         end--;
     }
-
     for(int j=0; j<size; j++)
     {
         cout<<arr[j]<<" ";
