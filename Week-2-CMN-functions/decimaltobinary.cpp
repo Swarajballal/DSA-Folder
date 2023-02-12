@@ -22,7 +22,7 @@ int decimaltobinary(int num)
     while(num > 0)
     {
         int bit = (num & 1);  //bitwise and with 1( we will get first bit)
-        binary += bit * pow(10, i++);
+        binary += bit * pow(10,i++);
         num = num >> 1;  //right shift by 1 bit  (so we get the nexy bit bu right shift right most bit that is the first bit will be ignored)
     }
     return binary;
