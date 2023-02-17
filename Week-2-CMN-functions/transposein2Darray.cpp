@@ -30,14 +30,14 @@ void print2darray(int arr[][3], int rows, int cols)
 // }
 
 //correct way
-void transpose(int arr[][3], int rows, int cols)
+void transpose(int arr[][3], int rows, int cols,int transposedarr[][3])
 {
-    cout<<"Transpose of 2D array:"<<endl;
+    cout<<"Transpose of "<<endl;
     for(int i = 0; i<rows; i++)
     {
-        for(int j = i; j<cols; j++)
+        for(int j = 0; j<cols; j++)
         {
-            swap(arr[i][j], arr[j][i]);
+           transposedarr[j][i] = arr[i][j];
         }
     }
 }
@@ -47,8 +47,9 @@ int main()
     int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
     int rows = 3;
     int cols = 3;
+    int transposedarr[3][3];
     print2darray(arr, rows, cols);
-    transpose(arr, rows, cols);
-    print2darray(arr, rows, cols);
+    transpose(arr, rows, cols, transposedarr);
+    print2darray(transposedarr, rows, cols);
     return 0;
 }

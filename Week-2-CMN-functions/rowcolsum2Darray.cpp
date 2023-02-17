@@ -25,14 +25,14 @@ void printColwiseSum(int arr[][3],int rows,int cols)
         {
             sum += arr[j][i];
         }
-        cout<<"Sum of Col is "<<sum<<endl;
+        cout<<"Sum of Col is "<<i<<" is"<<sum<<endl;
     }
 }
 
 int main()
 {
     //row-wise traversal
-    int arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};
+    int arr[3][3] = {{1,6,3},{4,7,6},{7,8,9}};
     int rows = 3;
     int cols = 3;
     printRowiseSum(arr,rows,cols);

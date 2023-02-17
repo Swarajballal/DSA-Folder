@@ -41,7 +41,7 @@ int maxNoin2Darray(int arr[][3], int rows, int cols)
 
 int main()
 {
-    int arr[3][3] = {{10,2,3},{4,5,6},{7,8,12}};
+    int arr[3][3] = {{10,2,3},{4,5,15},{1,8,12}};
     int rows = 3;
     int cols = 3;
     int max =  maxNoin2Darray(arr, rows, cols);
