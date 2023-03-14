@@ -41,7 +41,7 @@ vector<int> findcommonelethreearray(int*A, int*B, int*C, int n1, int n2, int n3)
     //remove duplicate element from array first then use above method
      
      //for removing duplicate element from array we can use 2 pointer method
-        //time complexity O(n1+n2+n3) and space complexity O(1)
+        //time complexity O(n1+n2+n3) and space complexity O(min(n1,n2,n3)))
         vector<int> ans;
         int i = 0, j = 0, k = 0;
         while(i < n1 && j < n2 && k < n3)
@@ -50,7 +50,7 @@ vector<int> findcommonelethreearray(int*A, int*B, int*C, int n1, int n2, int n3)
             {
                 ans.push_back(A[i]);
                 i++;j++;k++;
-                while(i < n1 && A[i] == A[i-1])  // removing duplicate element from array
+                while(i < n1 && A[i] == A[i-1])  // removing duplicate element from array i-1 because we have already checked i-1 element
                     i++;
                 while(j < n2 && B[j] == B[j-1])
                     j++;
