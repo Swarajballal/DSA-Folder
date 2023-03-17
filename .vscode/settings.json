@@ -3,7 +3,8 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "functional": "cpp",
-    "type_traits": "cpp"
+    "type_traits": "cpp",
+    "vector": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
