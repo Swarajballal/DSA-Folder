@@ -30,7 +30,7 @@
 //         }
 
 //         mid = start + (end - start) / 2;
-//     } 
+//     }
 //     return ans;
 // }
 
@@ -58,7 +58,7 @@
 //         }
 
 //         mid = start + (end - start) / 2;
-//     } 
+//     }
 //     return ans;
 // }
 
@@ -66,22 +66,20 @@
 // {
 //     vector<int> arr{1,2,3,4,4,4,4,4,4,10};
 //     int target = 4;
-//     int totalOccurence = findLastOccurence(arr, target) - findFirstOccurence(arr, target) + 1;
+//     int totalOccurence = findLastOccurence(arr, target) - findFirstOccurence(arr, target) + 1;  //+1 because we need to include the first occurence of the target let say 11-17 total is 11 12 13 14 15 16 17 including 11 i.e 7  6(last - first occurence)+1
 //     cout << " Total Occurence of " << target << " is " << totalOccurence << endl;
 // }
 
-
-
 // 2nd method using STL function
 
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    vector<int> arr{1,2,3,4,4,4,4,4,4,10};
+    vector<int> arr{1, 2, 3, 4, 4, 4, 4, 4, 4, 10};
     int target = 4;
     int lastOccurence = upper_bound(arr.begin(), arr.end(), target) - arr.begin();
     int firstOccurence = lower_bound(arr.begin(), arr.end(), target) - arr.begin();
