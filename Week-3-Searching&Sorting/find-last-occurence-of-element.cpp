@@ -33,7 +33,7 @@ int findLastOccurence(vector<int> arr, int target)
 int main()
 {
     vector<int> arr{1,2,3,4,4,4,4,8,9,10};
-    int target = 9;
+    int target = 4;
     int lastindex = findLastOccurence(arr, target);
     cout << " Last Occurence of " << target << " is at index " << lastindex << endl;
 }
