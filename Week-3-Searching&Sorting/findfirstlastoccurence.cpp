@@ -17,7 +17,7 @@ vector<int> find(int *arr, int n, int x)
         int last = upper_bound(arr, arr + n, x) - arr; // upper_bound gives the index of the first element greater than x
         result.push_back(last - 1);                    //-1 because upper_bound gives the index of the first element greater than x so we need to subtract 1 to get the last index of x
     }
-    return result;
+    return result; 
 }
 
 int main()
