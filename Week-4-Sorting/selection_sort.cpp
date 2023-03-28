@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// O(n^2) time complexity and O(1) space complexity
 void selectionSort(vector<int> &arr, int n)
 {
     for (int i = 0; i < n - 1; i++) // n-1 because we don't need to compare the last element with any other element it will be sorted by default
