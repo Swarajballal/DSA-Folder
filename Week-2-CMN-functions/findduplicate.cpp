@@ -39,7 +39,7 @@ int duplicate(vector<int> arr)
     // }
     // return arr[0];    //return the element at 0th index since that will be the duplicate element
 
-    // 4th method using binarty search time complexity O(nlogn) space complexity O(1)
+    // 4th method using binarty search time complexity O(logn) space complexity O(1)
     int low = 1, high = arr.size() - 1;
     while (low < high)
     {
