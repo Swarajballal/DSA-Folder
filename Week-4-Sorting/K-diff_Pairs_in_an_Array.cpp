@@ -34,7 +34,7 @@
 using namespace std;
 
 // Time Complexity: O(nlogn) + O(n) = O(nlogn) space complexity: O(1)
-
+// Method 1: Using two pointer approach
 // Withh Duplicate pairs
 
 // int findKDiffPairs(vector<int> &nums, int n, int k)
@@ -73,48 +73,92 @@ using namespace std;
 //     return count;
 // }
 
+// Method 2: Using two pointer approach
 // Without Duplicate pairs
+
+// int findKDiffPairs(vector<int> &nums, int n, int k)
+// {
+//     sort(nums.begin(), nums.end()); // first sort the array for better performance
+//     int i = 0, j = 1, count = 0;
+//     set<pair<int, int>> ans; // will store pairs that are unique hence set is used
+
+//     while (j <= n) // do untill j is less than n or j does not go out of bound
+//     {
+//         int diff = nums[j] - nums[i]; // diff will always be positive since we array sorted so j will always be greater than i
+
+//         if (diff == k) // if diff is equal to k then we have found a pair
+//         {
+//             cout << nums[i] << " " << nums[j] << endl;
+//             ans.insert({nums[i], nums[j]}); // insert the pair in set
+//             i++;
+//             j++; // increment i and j count++ to find more pairs
+//         }
+
+//         else if (diff > k) // if e difference is greater than k that means we need to decrease the difference so we will increment i the gap between i and j will decrease
+//         {
+//             i++;
+//         }
+
+//         else // if the differnce is less than k that means we need to increase the difference so we will increment j the gap between i and j will increase
+//         {
+//             j++;
+//         }
+
+//         if (i == j) // to avoid the case when i and j are at same position 1-1, 2-2-, 3-3 etc
+//         {
+//             j++;
+//         }
+//     }
+//     return ans.size(); // no of unique pairs is equal to size of set or no of pairs in set present
+// }
+
+// Method 3: Using Binary Search
+
+int binarySearch(vector<int> &nums, int start, int key) // start is i+1 and key is nums[i] + k since nums[j] - nums[j] = k so nums[j] = nums[i] + k
+{
+    int end = nums.size() - 1;
+    while (start <= end)
+    {
+        int mid = start + (end - start) / 2;
+
+        if (nums[mid] == key)
+        {
+            return mid;
+        }
+
+        else if (key > nums[mid])
+        {
+            start = mid + 1;
+        }
+
+        else
+        {
+            end = mid - 1;
+        }
+    }
+    return -1;
+}
 
 int findKDiffPairs(vector<int> &nums, int n, int k)
 {
-    sort(nums.begin(), nums.end()); // first sort the array for better performance
-    int i = 0, j = 1, count = 0;
-    set<pair<int, int>> ans; // will store pairs that are unique hence set is used
-
-    while (j <= n) // do untill j is less than n or j does not go out of bound
+    sort(nums.begin(), nums.end());
+    set<pair<int, int>> ans;
+    for (int i = 0; i < nums.size(); i++) // assume first or ith element as first element of pair
     {
-        int diff = nums[j] - nums[i]; // diff will always be positive since we array sorted so j will always be greater than i
-
-        if (diff == k) // if diff is equal to k then we have found a pair
+        if (binarySearch(nums, i + 1, nums[i] + k) != -1) // find the second element of pair using binary search where start = i+1 and  end = nums.size()-1 ;key  = nums[i] + k so as i increases the search space decreases
         {
-            cout << nums[i] << " " << nums[j] << endl;
-            ans.insert({nums[i], nums[j]}); // insert the pair in set
-            i++;
-            j++; // increment i and j count++ to find more pairs
-        }
-
-        else if (diff > k) // if e difference is greater than k that means we need to decrease the difference so we will increment i the gap between i and j will decrease
-        {
-            i++;
-        }
-
-        else // if the differnce is less than k that means we need to increase the difference so we will increment j the gap between i and j will increase
-        {
-            j++;
-        }
-
-        if (i == j) // to avoid the case when i and j are at same position 1-1, 2-2-, 3-3 etc
-        {
-            j++;
+            cout << nums[i] << " " << nums[i] + k << endl;
+            ans.insert({nums[i], nums[i] + k}); // unique pairs are inserted in set
         }
     }
-    return ans.size(); // no of unique pairs is equal to size of set or no of pairs in set present
+    return ans.size();
 }
 
 int main()
 {
     // vector<int> nums{3, 1, 4, 1, 5};
     vector<int> nums{1, 1, 1, 1, 1};
+    // vector<int> nums{6,11};
     int k = 0;
     int n = nums.size();
     int no_of_pairs = findKDiffPairs(nums, n, k);
