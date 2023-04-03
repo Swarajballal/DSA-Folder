@@ -45,7 +45,7 @@ int findPos(int arr[], int n, int x)
 int main()
 {
     int arr[] = {3, 5, 7, 9, 10, 90, 100, 130,
-                 140, 160, 170};
+                 140, 160, 170}; // can take infinite array as input
     int n = sizeof(arr) / sizeof(arr[0]);
     int x = 130;
     int ans = findPos(arr, n, x);
