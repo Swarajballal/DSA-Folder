@@ -70,7 +70,7 @@ int main()
     long long int n, m;
     // long long int because of the constraints The first line of input contains two space-separated positive integers, N (the number of trees, 1 ≤ N ≤ 1 000 000) and M (Mirko‟s required wood amount, 1 ≤ M ≤ 2 000 000 000).
     // The second line of input contains N space-separated positive integers less than 1 000 000 000, the heights of each tree (in metres).
-   cout << "Enter the number of trees and the required wood amount with space between them: " << endl;
+    cout << "Enter the number of trees and the required wood amount with space between them: " << endl;
     cin >> n >> m;
     // 4 , 7
     vector<long long int> trees;
