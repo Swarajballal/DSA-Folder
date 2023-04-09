@@ -82,19 +82,25 @@ int minTimeToCompleteOrder(vector<int> cooksRank, int nP, int nC)
 int main()
 {
     int T;
+    cout << "Enter number of test cases: ";
     cin >> T;
+    // 3
     while (T--)
     {
         int nP, nC; // nP = number of pratas, nC = number of cooks
+        cout << "Enter number of pratas and number of cooks put space between them : ";
+        // 10 4
         cin >> nP >> nC;
         vector<int> cooksRank;
         while (nC--)
         {
             int R; // R = rank of cook i.e time taken to cook 1 prata so first in array is 1st cook with per min time 1, 2nd cook with per min time 2 and so on
+            cout << "Enter rank of cook: ";
+            // 1 2 3 4
             cin >> R;
             cooksRank.push_back(R);
         }
-        cout << minTimeToCompleteOrder(cooksRank, nP, nC) << endl;
+        cout << "Minimum time to complete order is: " << minTimeToCompleteOrder(cooksRank, nP, cooksRank.size()) << " minutes" << endl;
     }
 
     return 0;
