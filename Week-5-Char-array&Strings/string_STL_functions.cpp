@@ -72,4 +72,5 @@ int main()
     sentence3.erase(12, 9); // first parameter is the starting index of the word to be erased second parameter is the no of words present in the sentence you are trying to erase
     // erase() function modifies the original string
     cout << sentence3 << endl;
+    // stoi() function is used to convert a string to integer
 }
