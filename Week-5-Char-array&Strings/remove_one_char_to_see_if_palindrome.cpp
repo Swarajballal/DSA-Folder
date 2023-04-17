@@ -51,7 +51,7 @@ bool validPalindrome(string s)
         start++; // always increment start
         end--;   // always decrement end
     }
-    return true; // if palindrome return true
+    return true; // if no element is removed and palindrome return true
 }
 
 int main()
