@@ -59,3 +59,21 @@ public:
     // and finally return the answer
   }
 };
+
+// or using set
+//  vector<int> ans;
+//         set<int> nums1_set;
+//         for(int i =0; i < nums1.size(); i++)
+//         {
+//             nums1_set.insert(nums1[i]);
+//         }
+
+//         for(int i = 0; i < nums2.size(); i++)
+//         {
+//             if(nums1_set.find(nums2[i]) != nums1_set.end())
+//             {
+//                 ans.push_back(nums2[i]);
+//                 nums1_set.erase(nums2[i]);
+//             }
+//         }
+//         return ans;

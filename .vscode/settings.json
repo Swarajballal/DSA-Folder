@@ -4,7 +4,9 @@
     "ostream": "cpp",
     "functional": "cpp",
     "type_traits": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "bitset": "cpp",
+    "set": "cpp"
   },
   "C_Cpp.errorSquiggles": "disabled"
 }
