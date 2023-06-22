@@ -77,3 +77,37 @@ public:
 //             }
 //         }
 //         return ans;
+
+// using two pointer approach time complexity O(nlogn)
+// space complexity O(1)
+
+//     class Solution
+// {
+// public:
+//   vector<int> intersection(vector<int> &nums1, vector<int> &nums2)
+//   {
+//     sort(nums1.begin(), nums1.end()); // sort both the arrays
+//     sort(nums2.begin(), nums2.end());
+//     set<int> ansSet;
+//     int i = 0, j = 0; // two pointers
+
+//     while (i < nums1.size() && j < nums2.size())
+//     {
+//       if (nums1[i] == nums2[j]) // if both the elements are equal then add it to the set
+//       {
+//         ansSet.insert(nums1[i]); // set for unique elements
+//         i++;
+//         j++;
+//       }
+//       else if (nums1[i] > nums2[j]) // if nums1 element is greater then increment j
+//       {
+//         j++;
+//       }
+//       else // if nums2 element is greater then increment i
+//       {
+//         i++;
+//       }
+//     }
+//     return vector<int>(ansSet.begin(), ansSet.end()); // return the vector
+//   }
+// };

@@ -1,3 +1,6 @@
+
+//also called as doubling search or galloping search or struzik search
+
 #include <bits/stdc++.h>
 using namespace std;
 
