@@ -1,21 +1,21 @@
 
-//also called as doubling search or galloping search or struzik search
+// also called as doubling search or galloping search or struzik search
 
 #include <bits/stdc++.h>
 using namespace std;
 
 int binarySearch(int a[], int start, int end, int x)
 {
-    while(start <= end)
+    while (start <= end)
     {
         int mid = start + (end - start) / 2;
 
-        if(a[mid] == x)
+        if (a[mid] == x)
         {
             return mid;
         }
 
-        else if(x > a[mid])
+        else if (x > a[mid])
         {
             start = mid + 1;
         }
@@ -35,7 +35,7 @@ int exponentialSearch(int a[], int n, int x)
     int i = 1;                 // i does not start from 0 because i = i*2 will be 0
     while (i < n && a[i] <= x) // find the range where x lies i is less than n and a[i] is less than x
     {
-        i = 2 * i; // i is doubled  hence it is called doubling search either
+        i = 2 * i; // i is doubled  hence it is called doubling search either  or i*=2 or i=i<<1
     }
     return binarySearch(a, i / 2, min(i, n - 1), x); // so i/2 is the previous i value so that is start index and min(i,n-1) is the end index because i may go out of bounds so minimum of i and n-1 is taken
 }

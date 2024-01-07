@@ -7,7 +7,7 @@ void findallsubstr(string str)
     {
         for (int j = 1; j <= str.length() - i; j++) // j is the length of the substring  length - i because we dont want to go out of the string
         {
-            cout << str.substr(i, j) << endl; // printing the substring
+            cout << str.substr(i, j) << endl; // printing the substring finding all possible substrings
         }
     }
 }
