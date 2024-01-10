@@ -3,38 +3,28 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "Enter the number of rows: "<<endl;;
-    cin >> n;
-    for(int i=0; i<n; i++)    //total no of rows
-    {
-        int count = i;
-        int k=0;
-        for(int j=0; j<(2*n)-1; j++)     //total columns
-        {
-            if(j<n-i-1)    //initial spaces
-            {
+    int total_rows;
+    cout << "Enter the nunber of rows: ";
+    cin >> total_rows;
+    for(int row = 0; row < total_rows; row++) {
+        int k = 0;
+        int count = row+1;
+        for(int col = 0; col < (2*total_rows) - 1; col++){
+            if(col <= (total_rows - row - 1)){
                 cout << " ";
             }
-            else if(k<(2*i+1))   //total elements in each row
-            {
-                if(k<=i)        //increment till which index:increment from k=0 index till 1 if total elements equal to 3 where row would be i=1; hence k<=i 
-                {
-                    cout<< count+1;
+
+            else if(k<(2*row+1)) {
+                if (k <= row) {
+                    cout << count;
                     count++;
+                } else {
+                    count--;
+                    cout << count;
                 }
-                else
-                {
-                    count--;   //decrement at which index
-                    cout<<count;
-                }
-                k++;
-            }
-            else
-            {
-                cout<<" ";     // else spaces
+                k++;5
             }
         }
-        cout<<endl;   //new line
+        cout << endl;
     }
 }
