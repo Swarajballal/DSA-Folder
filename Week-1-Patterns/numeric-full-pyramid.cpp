@@ -7,23 +7,20 @@ int main()
     cout << "Enter the nunber of rows: ";
     cin >> total_rows;
     for(int row = 0; row < total_rows; row++) {
-        int k = 0;
-        int count = row+1;
-        for(int col = 0; col < (2*total_rows) - 1; col++){
-            if(col <= (total_rows - row - 1)){
-                cout << " ";
-            }
+        // for spaces
+        for(int col = 0; col < total_rows - row - 1; col++) {
+            cout << " ";
+        }
+        // numbers
+        for(int col = 0; col < row+1; col++) {
+            cout << col + row + 1;
+        }
 
-            else if(k<(2*row+1)) {
-                if (k <= row) {
-                    cout << count;
-                    count++;
-                } else {
-                    count--;
-                    cout << count;
-                }
-                k++;5
-            }
+        // reverse numbers
+        int start = 2*row;
+        for(int col = 0; col < row; col++) {
+            cout << start;
+            start--;
         }
         cout << endl;
     }
