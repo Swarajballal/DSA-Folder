@@ -46,8 +46,6 @@ int binarytodecimal(string binary)
     return decimal;
 
 }
-
-
 int main()
 {
     string binary;
