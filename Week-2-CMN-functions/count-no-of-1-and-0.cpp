@@ -15,6 +15,7 @@ int main() {
         }
          if(arr[i]==1)
         {
+
             numone++;
         }
     }
