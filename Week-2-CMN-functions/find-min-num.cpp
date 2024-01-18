@@ -10,6 +10,8 @@ int minnum(int arr[], int size)
         if(arr[i] < min)
         {
             min =arr[i];
+
+
         }
     }
     return min;
