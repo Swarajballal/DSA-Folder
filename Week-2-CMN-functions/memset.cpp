@@ -18,3 +18,4 @@ int main()
 //floating-point numbers. To set a block of memory to a specific 
 //non-binary value, you would need to write a loop that writes 
 //that value to each individual byte of memory, rather than using memset.
+//in memeset you can only use -1 or 0.

@@ -36,14 +36,30 @@ void reversearr(int arr[], int size)
 // }
 
 // without predefined function for swap for reverse and also without temp variable
-    while(start < end)
-    {
-        arr[start] = arr[start] + arr[end];     // 2+5 = 7
-        arr[end] = arr[start] - arr[end];       // 7-5 = 2
-        arr[start] = arr[start] - arr[end];     // 7-2 = 5
+//    while(start < end)
+//    {
+//        arr[start] = arr[start] + arr[end];     // 2+5 = 7
+//        arr[end] = arr[start] - arr[end];       // 7-5 = 2
+//        arr[start] = arr[start] - arr[end];     // 7-2 = 5
+//        start++;
+//        end--;
+//    }
+//    for(int j=0; j<size; j++)
+//    {
+//        cout<<arr[j]<<" ";
+//    }
+
+// Using XOR this will fail if x == y because it will lead to 0 and original value will be lost
+
+    while(start < end){
+        arr[start] = arr[start] ^ arr[end];
+        arr[end] = arr[start] ^ arr[end];
+        arr[start] = arr[start] ^ arr[end];
+
         start++;
         end--;
     }
+
     for(int j=0; j<size; j++)
     {
         cout<<arr[j]<<" ";
