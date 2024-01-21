@@ -37,6 +37,8 @@ using namespace std;
 int main()
 {
     int arr[] = {1, 2, 2, 3, 3, 4, 6, 7, 9};
+
+
     int size = 9;
     int target = 4;
     int index = findFirstOccurence(arr, size, target);
