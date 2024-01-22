@@ -24,6 +24,7 @@ using namespace std;
         {
             //right search
             start = mid + 1;
+
         }
 
         mid = start + (end - start) / 2;  //update mid
