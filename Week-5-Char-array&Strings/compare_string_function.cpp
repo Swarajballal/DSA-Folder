@@ -7,6 +7,7 @@ int main()
     cout << "Enter name1: ";
     cin >> name1;
     cout << "Enter name2: ";
+
     cin >> name2;
 
     if (name1.length() != name2.length()) // to check if both string are of same length or not
