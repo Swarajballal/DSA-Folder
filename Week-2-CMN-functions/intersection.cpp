@@ -17,6 +17,8 @@ void intersection(vector<int> arr, vector<int> brr, vector<int> ans)
                 // marking the element as -1
                 brr[j] = -1;            // if there were negative numbers then we would have replaced -1 with INT_MIN
                 ans.push_back(element); // push the element in ans array
+
+
             }
         }
     }
