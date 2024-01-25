@@ -62,6 +62,7 @@ int firstrepeat(int *arr, int n)
         {
             delete [] hash; // deleting hash table
             return i+1;
+
         }
     }
     delete [] hash; // deleting hash table
