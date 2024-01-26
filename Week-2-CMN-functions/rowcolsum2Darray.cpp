@@ -24,6 +24,7 @@ void printColwiseSum(int arr[][3],int rows,int cols)
         for(int j=0;j<cols;j++)
         {
             sum += arr[j][i];
+
         }
         cout<<"Sum of Col is "<<i<<" is"<<sum<<endl;
     }
