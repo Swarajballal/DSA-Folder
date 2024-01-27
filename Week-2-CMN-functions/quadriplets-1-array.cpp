@@ -25,6 +25,7 @@ void quadraplets(vector<int> arr, int sum)
                         {
                             cout<<" Quadraplets are: "<<element1<<" "<<element2<<" "<<element3<<" "<<element4<<endl;
                             flag = true;
+
                         }
                     }
 
