@@ -23,6 +23,7 @@ vector<int> factorial(int N)
 
     }
     reverse(ans.begin(), ans.end());  // reversing the ans vector
+
     return ans;
 }
 
