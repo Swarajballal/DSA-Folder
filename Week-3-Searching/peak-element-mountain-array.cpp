@@ -17,6 +17,7 @@ int peakElement(vector<int> &arr)
         }
         mid = start + (end - start) / 2; // update mid
     }
+
     return arr[start]; // return the peak element
 }
 
