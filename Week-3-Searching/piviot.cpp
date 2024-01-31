@@ -32,6 +32,7 @@ int pivotElement(vector<int> arr)
             start = mid + 1; // if start is less than mid then pivot element is in the right half of the array
         }
     }
+
     return -1;
 }
 
