@@ -89,3 +89,84 @@ int main()
     }
     return 0;
 }
+
+
+// for arrays
+
+////Pivot index finding so that we can break the array into two sorted monolithic array
+//int findPivotIndex(int arr[], int l, int h){
+//    int index = -1; // index as -1 initialized if no index found
+//    while(l <= h) {
+//        int m = l + (h - l)/2;
+//        // if there is only one element in the array then return that index
+//        // or at the end of the array
+//        if(l == h){
+//            index = l;
+//            break;
+//        }else if(m + 1 <= h && arr[m] > arr[m + 1]){
+//            // only the max element will be greater then element iin front of it or pivot index
+//            index = m;
+//            break;
+//        }else if(m - 1 >= 0 && arr[m - 1] > arr[m]){
+//            // if the pivot index or max element is behind the mid element
+//            index = m - 1;
+//            break;
+//        }else if(arr[l] > arr[m]){
+//            // when a start element is more then the mid that means we are on the right side of the pivot element
+//            //so we need to move left to find pivot index
+//            h = m - 1;
+//        }else {
+//            // if not that means we are on left side of pivot index so we need to move right
+//            l = m + 1;
+//        }
+//    }
+//    return index;
+//}
+//
+//
+//// Perform binary search operation here
+//int binarySearch(int arr[], int l, int h, int target) {
+//    // initially the index is -1 that means nothing found
+//    int value = -1;
+//    while(l <= h) {
+//        int m = l + (h - l)/2;
+//
+//        if(arr[m] == target) {
+//            // if target found return index
+//            value = m;
+//            break;
+//        }
+//        else if(arr[m] > target) {
+//            // if target is less then current element then search on left
+//            h = m - 1;
+//        }else {
+//            //else right
+//            l = m + 1;
+//        }
+//    }
+//    //return value else if not found then -1
+//    return value;
+//}
+//
+//
+//int search(int arr[], int l, int h, int key){
+//    // l: The starting index
+//    // h: The ending index, you have to search the key in this range
+//    int pivotIndex = findPivotIndex(arr, l, h);
+//    // conditons on which searchspace key might be present
+//    int ans = -1;
+//    if(pivotIndex != -1){ // if pivotIndex actually exsists
+//        if(key >= arr[0] && key <= arr[pivotIndex]){
+//            // binary search to search the key element
+//            // between 0 and pivotIndex
+//            ans = binarySearch(arr, 0, pivotIndex, key);
+//        }else {
+//            // binary search to search the key element
+//            // between pivotIndex + 1 to end of array
+//            ans = binarySearch(arr, pivotIndex + 1, h, key);
+//        }
+//    }
+//
+//    return ans;
+//
+//}

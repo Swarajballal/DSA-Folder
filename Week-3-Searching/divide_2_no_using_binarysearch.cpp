@@ -30,7 +30,7 @@ int binarySearch(int dividend, int divisor)
 
     // for negative numbers also (both dividend and divisor) and positive numbers
     int start = 0, end = abs(dividend), quotient = 1; // abs() is used to convert negative number to positive so use it for both dividend and divisor all instances
-    int sign = 1;
+    int sign = 1;   
 
     if ((dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0)) // made it early so that perfect match can also be checked for -ve or +ve sign
     {
