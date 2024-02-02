@@ -25,6 +25,7 @@ int main()
 
     for (int round = 1; round < n; round++) // round here describes the number of itteration from 1 to n-1 see full working in notebook
     {
+
         bool swapped = false;               // at first nothing is swapped hence false
         for (int j = 0; j < n - round; j++) // j here represents the index of the array and n-round is used to reduce the number of itteration in each round because at the end of each round the last element will be sorted it equal to n-round-1 times comparisons if n = 6 round = 5 comparisons = 4 hence n- round - 1 or 0 to n-round-1
         {
