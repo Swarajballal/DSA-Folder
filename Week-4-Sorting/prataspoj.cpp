@@ -31,6 +31,7 @@ using namespace std;
 bool isPossible(vector<int> cooksRank, int nP, int sol)
 {
     int currP = 0; // currP = current number of pratas cooked
+
     for (int i = 0; i < cooksRank.size(); i++)
     {
         int j = 1;            // j here is representing the multiple of R so 1st prata takes 1*R time, 2nd prata takes 2*R time and so on

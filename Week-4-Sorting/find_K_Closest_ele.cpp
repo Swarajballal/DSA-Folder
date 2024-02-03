@@ -1,8 +1,8 @@
-#include <bits/stdc++.h>
+    #include <bits/stdc++.h>
 using namespace std;
 
 // Method 1: Using Difference Array and sort and return the first k elements   not a good approach
-//  brute force approach where we find differnce of x with all the elements and then sort them  according to difference and then print the first k elements
+//  brute force approach where we find difference of x with all the elements and then sort them  according to difference and then print the first k elements
 
 // vector<int> findKClosestEle(vector<int> &v, int n, int x, int k)
 // {
