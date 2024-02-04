@@ -32,7 +32,8 @@ bool isPossibleSol(int A[], int n, int M, int sol)
 int findPages(int A[], int n, int M)
 {
     int start = 0, end = accumulate(A, A + n, 0); // sum of all elements using STL accumulate to get max sum
-    int ans = -1;                                 // if no solution is possible
+    int ans = -1;
+    // if no solution is possible
     if (M > n)
         return -1; // if no. of students is greater than no. of books
 
