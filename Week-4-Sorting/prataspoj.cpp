@@ -64,6 +64,7 @@ int minTimeToCompleteOrder(vector<int> cooksRank, int nP, int nC)
     // for binary search find min and max time
     end = *max_element(cooksRank.begin(), cooksRank.end()) * (nP * (nP + 1) / 2); // here max time is when the most inefficient cook cooks all the pratas so we find max element in cooksRank array  by *max_element that is most ineffecient cook
     // and multiply it with nP*(nP+1)/2 since nP*(nP+1)/2 is the sum of first nP natural numbers since 1st cook takes cookRank[0] times 2nd parata takes 2*cookRank[0] times and so on
+
     while (start <= end)
     {
         int mid = (start + end) >> 1;
