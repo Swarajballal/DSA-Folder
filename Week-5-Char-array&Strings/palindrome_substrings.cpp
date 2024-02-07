@@ -76,5 +76,6 @@ int main()
     string s = "abc";
     int ans = palindormeSubstrings(s);
     cout << "The number of palindorme substrings are: " << ans << endl;
+
     return 0;
 }
