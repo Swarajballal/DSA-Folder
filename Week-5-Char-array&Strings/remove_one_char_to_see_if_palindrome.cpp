@@ -65,6 +65,7 @@ int main()
     }
     else
     {
+
         cout << "It is not possible to make a palindrome by removing one character";
     }
     return 0;
