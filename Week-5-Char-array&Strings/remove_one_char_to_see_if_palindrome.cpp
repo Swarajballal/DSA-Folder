@@ -25,6 +25,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+int stringSize(string s)
+{
+    int length = 0;
+
+    while(s[length] != '\0')
+    {
+        length++;
+    }
+    return length;
+}
+
 bool checkPalindrome(string str, int start, int end) // to check palindrome after updating start or end index
 {
     while (start <= end) // start less then equal to end
@@ -41,7 +53,7 @@ bool checkPalindrome(string str, int start, int end) // to check palindrome afte
 bool validPalindrome(string s)
 {
     int start = 0;            // start index
-    int end = s.length() - 1; // end index
+    int end = stringSize(s) - 1; // end index
     while (start <= end)
     {
         if (s[start] != s[end]) // if start element not equal to end element
@@ -56,7 +68,7 @@ bool validPalindrome(string s)
 
 int main()
 {
-    string s = "abcar";
+    string s = "abar";
     bool result = validPalindrome(s);
 
     if (result)
