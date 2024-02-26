@@ -76,6 +76,7 @@ int compress(vector<char>& chars) {
     if(count > 1)   // only if the count is greater than 1 then add the count of the character to the compressed string
     {   
         int start = index;  // same as above
+        
         while(count) {
 
             chars[index++] = (count % 10) + '0';
