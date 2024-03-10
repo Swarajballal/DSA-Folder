@@ -100,8 +100,7 @@
         return result; // Return the result
     }
 
-
-
+s
     int main()
     {
         int T;
