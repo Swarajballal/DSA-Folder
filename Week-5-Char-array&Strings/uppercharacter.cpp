@@ -10,6 +10,7 @@ int stringlength(char name[])
         i++;
         len++;
     }
+    
     return len;
 }
 
