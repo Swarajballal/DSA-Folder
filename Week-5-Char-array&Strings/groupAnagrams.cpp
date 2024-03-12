@@ -66,7 +66,8 @@ using namespace std;
 
 vector<vector<string>> groupAnagrams(vector<string>& strs) {
 
-    map<std::array<int, 256>, vector<string>> mp;   // create a map of a hash of 256 size array as key and vector of strings as value
+    map<std::array<int, 256>, vector<string>> mp; 
+      // create a map of a hash of 256 size array as key and vector of strings as value
     
     for(auto str : strs)
     {
