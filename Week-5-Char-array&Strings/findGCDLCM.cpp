@@ -64,7 +64,9 @@ int findGcd(int A, int B)
 vector<int> findGcdLcm(int A, int B)
 {
     vector<int> ans;
+
     int gcd = findGcd(A, B);
+    
     int lcm = (A*B)/gcd;  // using the formula to find lcm i.e. gcd(a,b) * lcm(a,b) = a*b
     ans.push_back(lcm);
     ans.push_back(gcd);
