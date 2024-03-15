@@ -11,6 +11,7 @@ int main()
     }
 
     cout << "Length of string is " << i << endl;
+    
     // OR
     cout << "Length of string is " << strlen(name) << endl;
 }
