@@ -30,6 +30,7 @@ int main()
             }
         }
         // Step 4: Copying the current element in its resepective place
+        
         arr[j + 1] = val; // after shifting all the element greater then current element it will put the current element in its resepective place
     }
 
