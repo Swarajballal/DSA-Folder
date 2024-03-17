@@ -113,6 +113,7 @@ vector<int> findKClosestEle(vector<int> &arr, int k, int x)
         else if (high >= arr.size()) // if high is greater than or equal to the size of the array then we will move the low pointer to the left
         {
             low--;
+            
         }
         else if (x - arr[low] > arr[high] - x) // if the difference of x with low is greater than the difference of x with high then we will move the low pointer the less the difference the more the closeness the less diffenence move that if arr[low] is less move low to left if arr[high] is less move high to right
         {
