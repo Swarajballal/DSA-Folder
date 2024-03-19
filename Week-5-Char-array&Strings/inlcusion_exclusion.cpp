@@ -19,6 +19,7 @@ int main()
 {
     int n,x,y;
     cout << "Enter the number to be divided: ";
+    
     cin >> n;
     cout << "Enter the number x: ";
     cin >> x;
