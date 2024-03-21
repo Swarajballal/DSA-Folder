@@ -5,6 +5,7 @@ int main()
 {
     int total_rows;
     cout << "Enter the nunber of rows: ";
+    
     cin >> total_rows;
     for(int row = 0; row < total_rows; row++) {
         // for spaces
