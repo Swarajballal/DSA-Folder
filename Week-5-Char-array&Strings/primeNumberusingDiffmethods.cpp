@@ -97,15 +97,15 @@ using namespace std;
 // int findCountPrime(int n)
 // {
 //     int ans = 0;
-//     vector<bool>isPrime(n, true); // to store the prime numbers and initialize all the numbers as prime
+//     vector<bool>isPrime(n+1, true); // to store the prime numbers and initialize all the numbers as prime
 //     isPrime[0] = isPrime[1] = false; // 0 and 1 are not prime numbers
 
-//     for(int i = 2; i < n; i++)  // iterate from 2 to n-1 because 0 and 1 are not prime numbers
+//     for(int i = 2; i <= n; i++)  // iterate from 2 to n-1 because 0 and 1 are not prime numbers
 //     {
 //         if(isPrime[i]) {    // if the number is prime then increment the count of prime numbers and mark all the multiples of the number as not prime since all are true initially
 //             ans++;  // increment the count of prime numbers
 //             int j = 2 * i;  // start from the first multiple of the number *2
-//             while(j < n)  // iterate till the last multiple of the number
+//             while(j <= n)  // iterate till the last multiple of the number
 //             {
 //                 isPrime[j] = false;  // mark the multiple as not prime
 //                 j += i;  // increment the multiple by the number
@@ -116,30 +116,33 @@ using namespace std;
 // }
 
 
-// Method 4: Segmented Sieve Time complexity: O(nloglogn) Space complexity: O(sqrt(n))
-// when two number low and high are given and we have to find the prime numbers between low and high
-// Still TlE error on gfg
+// Method 4: Optimized Sieve of Eratosthenes Time complexity: O(nloglogn) Space complexity: O(n) but still runs faster than the above method
 
-//  int findCountPrime(int L, int H)
-//  {
-//         int ans = 0;
-//         vector<bool>isPrime(H - L + 1, true); // to store the prime numbers and initialize all the numbers as prime
-//         if(L == 1) isPrime[0] = false; // 1 is not prime number
-    
-//         for(int i = 2; i * i <= H; i++)  // iterate from 2 to sqrt(H) because 0 and 1 are not prime numbers
+// int findCountPrime(int n)
+// {
+//     vector<bool>isPrime(n+1, true);
+//     isPrime[0] = isPrime[1] = false;
+//     for(int i = 2; i * i <= n; i++)   // optimization 1 iterate till i * i <= n because if i > sqrt(n) then it will run inner loop which is not required since it will be more than n
+//     {
+//         if(isPrime[i])
 //         {
-//             for(int j = max(i * i, (L + i - 1) / i * i); j <= H; j += i) // iterate from i^2 to H and mark all the multiples of the number as not prime since all are true initially
+//             int j = i * i; // optimization 2 start from i * i because all the multiples of i less than i * i are already marked as not prime
+//             while(j <= n)
 //             {
-//                 isPrime[j - L] = false;  // mark the multiple as not prime
+//                 isPrime[j] = false;
+//                 j += i;
 //             }
 //         }
-//         for(int i = 0; i < H - L + 1; i++)  // iterate from 0 to H-L+1
+//     }
+
+//     for(int i = 2; i <= n; i++)
+//     {
+//         if(isPrime[i])
 //         {
-//             if(isPrime[i]) ans++;  // if the number is prime then increment the count of prime numbers
+//             cout << i << " ";
 //         }
-//         return ans; // return the count of prime numbers
-    
-//  }
+//     }
+// }
 
 
 int main()
