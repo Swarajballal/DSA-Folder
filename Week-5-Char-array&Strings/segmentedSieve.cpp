@@ -36,6 +36,7 @@ vector<bool> segmentedSieve(int L, int R) {
     }
 
     for(auto prime:basePrimes) {
+        
         int first_mul = (L / prime) * prime;
         if(first_mul < L) {
             first_mul += prime;
