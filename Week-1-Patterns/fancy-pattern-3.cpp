@@ -20,6 +20,7 @@ int main ()
             }
         }
         int num = row-1;
+        
         for(col=0; col<row; col++)
         {
             if(col==row-1)
