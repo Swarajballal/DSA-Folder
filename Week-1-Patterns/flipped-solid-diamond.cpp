@@ -6,6 +6,7 @@ int main()
     int row, col, rowscount;
     cout << "Enter the number of rows: ";
     cin >> rowscount;
+    
     for (row = 0; row < rowscount; row++)
     {
         // half pyramid
