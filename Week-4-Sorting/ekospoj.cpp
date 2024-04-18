@@ -32,6 +32,7 @@ using namespace std;
 
 bool isPossible(vector<long long int> trees, long long int m, long long int sol)
 {
+    
     long long int woodCollected = 0; // wood collected by the saw blade
     for (int i = 0; i < trees.size(); i++)
     {
