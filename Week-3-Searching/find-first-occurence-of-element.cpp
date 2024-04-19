@@ -11,7 +11,7 @@ using namespace std;
     {
         if(arr[mid] == target)  //if element found
         { 
-            ans = mid;  //first store the index found at first mid
+            ans = mid;   //first store the index found at first mid
             //left search
             end = mid - 1;
         }

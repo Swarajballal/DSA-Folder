@@ -48,7 +48,7 @@ long long int maxSawBladeHeight(vector<long long int> trees, long long int m)
 {
     long long int start, end, ans = -1;             // ans = -1 because we are looking for the maximum height
     start = 0;                                      // start = 0 because the minimum height of the tree is 0
-    end = *max_element(trees.begin(), trees.end()); // end = maximum height of the tree in the array STL function *max_element() returns the maximum element in the range [first, last).
+    end = *max_element(trees.begin(), trees.end()); // end = maximum height of the tree in the array STL function  *max_element() returns the maximum element in the range [first, last).
     while (start <= end)
     {
         long long int mid = start + (end - start) / 2;
