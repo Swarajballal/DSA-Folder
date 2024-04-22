@@ -28,6 +28,7 @@ double findSqrt(int num, int precision)
 
     // with floating values
     int start = 0, end = num, target = num, ans = -1;
+    
     int mid = start + (end - start) / 2;
     
     while (start <= end)
