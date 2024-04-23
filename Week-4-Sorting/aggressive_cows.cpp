@@ -46,6 +46,7 @@
 // 0 <= stalls[i] <= 10^9
 
 #include <bits/stdc++.h>
+
 using namespace std;
 
 bool isPossible(vector<int> &stalls, int k, int sol) // to check if it is possible to place k cows with minimum distance sol
