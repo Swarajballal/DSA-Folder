@@ -23,6 +23,7 @@ int main()
     vector<int> arr{5, 2, 4, 3, 1};
 
     int n = arr.size();
+    
     selectionSort(arr, n);
     for (int i = 0; i < arr.size(); i++)
     {
