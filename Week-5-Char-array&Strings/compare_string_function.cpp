@@ -6,6 +6,7 @@ int main()
     string name2;
     cout << "Enter name1: ";
     cin >> name1;
+    
     cout << "Enter name2: ";
 
     cin >> name2;
